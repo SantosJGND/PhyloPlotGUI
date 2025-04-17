@@ -44,7 +44,6 @@ def main():
         # Populate highlight values when a highlight column is selected
         if event == "-HIGHLIGHT_COLUMN-" and metadata_df is not None:
             highlight_column = values["-HIGHLIGHT_COLUMN-"]
-            print(highlight_column)
             if highlight_column in metadata_df.columns:
                 unique_values = metadata_df[highlight_column].dropna().unique().tolist()
                 window["-HIGHLIGHT_VALUES-"].update(values=unique_values)
